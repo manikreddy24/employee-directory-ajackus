@@ -1,6 +1,13 @@
 Here’s a **ready-to-submit `README.md`** based on the official Ajackus submission guidelines you shared:
 
 ---
+# Outcome 
+# Home page
+<img width="1887" height="863" alt="Screenshot 2025-07-12 095807" src="https://github.com/user-attachments/assets/1bfadd91-938d-4524-8117-50460955cc5b" />
+
+# Add page
+<img width="427" height="333" alt="Screenshot 2025-07-12 095849" src="https://github.com/user-attachments/assets/3f91f29a-d7e6-413d-8ad3-3c0e9092fc4e" />
+
 
 ```markdown
 # 🧑‍💻 Employee Directory App — Ajackus Frontend Assignment
@@ -70,7 +77,3 @@ project/
 
 ✅ Built with ❤️ and a focus on clean, functional frontend engineering.
 ```
-
----
-
-Let me know if you'd like help inserting screenshot image links or converting this to a downloadable `.md` file. You're now 100% ready for submission!
