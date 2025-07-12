@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add/Edit Employee</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <h1>Add / Edit Employee</h1>
+
+  <form id="employeeForm">
+    <input type="text" id="firstName" placeholder="First Name" required /><br/>
+    <input type="text" id="lastName" placeholder="Last Name" required /><br/>
+    <input type="email" id="email" placeholder="Email" required /><br/>
+    <input type="text" id="department" placeholder="Department" required /><br/>
+    <input type="text" id="role" placeholder="Role" required /><br/>
+    <button type="submit">Save</button>
+    <button type="button" onclick="cancel()">Cancel</button>
+  </form>
+
+  <script src="js/data.js"></script>
+  <script src="js/form.js"></script>
+</body>
+</html>

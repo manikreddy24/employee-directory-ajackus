@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Employee Directory</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="app-header">
+    <div class="header-content">
+      <h1>Employee Directory</h1>
+      <input type="text" id="searchInput" placeholder="🔍 Search by name or email" />
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+<!-- Top Bar: Sort & Add -->
+<div class="top-bar">
+  
+  <button class="add-btn" onclick="openAddForm()">+ Add Employee</button>
+
+  <select id="sortBy">
+    <option value="">Sort By</option>
+    <option value="firstName">First Name</option>
+    <option value="department">Department</option>
+  </select>
+
+</div>
+
+
+    <!-- Filters -->
+    <div class="filters">
+      <select id="departmentFilter">
+        <option value="">All Departments</option>
+        <option value="HR">HR</option>
+        <option value="Tech">Tech</option>
+        <option value="Finance">Finance</option>
+      </select>
+
+      <select id="roleFilter">
+        <option value="">All Roles</option>
+        <option value="Manager">Manager</option>
+        <option value="Developer">Developer</option>
+        <option value="Analyst">Analyst</option>
+      </select>
+    </div>
+
+    <!-- Employee List -->
+    <div id="employeeList" class="employee-grid"></div>
+
+    <!-- Pagination -->
+    <div class="pagination-controls">
+      <label for="pageSize">Show:</label>
+      <select id="pageSize">
+        <option value="10">10</option>
+        <option value="25">25</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+      </select>
+
+      <button onclick="prevPage()" class="arrow-btn">⬅ Prev</button>
+      <span id="pageInfo">Page 1 of 1</span>
+      <button onclick="nextPage()" class="arrow-btn">Next ➡</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="app-footer">
+    <p>© 2025 Employee Directory App. All rights reserved.</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

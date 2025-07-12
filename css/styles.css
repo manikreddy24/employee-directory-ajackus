@@ -1,0 +1,282 @@
+/* === Base Styles === */
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f6f8;
+}
+
+/* === Header === */
+.app-header {
+  background-color: #000;
+  color: #fff;
+  padding: 15px 20px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header-content h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.header-content input {
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
+  width: 250px;
+}
+
+/* === Main Container === */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  border-radius: 8px;
+  margin-top: 30px;
+  width: 100%;
+}
+
+/* === Top Bar (Sort + Add Button) === */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.add-btn {
+  padding: 10px 16px;
+  font-size: 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background-color: #1e7e34;
+}
+
+/* === Filters === */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+select {
+  padding: 8px;
+  font-size: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* === Employee Grid === */
+.employee-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 15px;
+}
+
+.employee-card {
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.employee-card p {
+  margin: 5px 0;
+}
+
+.emp-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.employee-card button {
+  margin-right: 8px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.employee-card button:first-of-type {
+  background-color: #ffc107;
+  color: white;
+}
+
+.employee-card button:last-of-type {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* === Pagination === */
+.pagination-controls {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.arrow-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.arrow-btn:hover {
+  background-color: #0056b3;
+}
+
+#pageInfo {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* === Footer === */
+.app-footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+}
+
+/* === Mobile Responsive === */
+@media (max-width: 800px) {
+  html, body {
+    height: 500vh;
+    width: 95vw;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .app-header {
+    padding: 30px 20px;
+    height: 500px;
+  }
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .header-content h1 {
+    font-size: 22px;
+  }
+  .header-content input {
+    font-size: 16px;
+    padding: 10px;
+  }
+  
+
+  .top-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filters {
+    flex-direction: column;
+  }
+   .employee-grid {
+    grid-template-columns: repeat(2, 1fr); /* ✅ two columns only */
+    gap: 12px;
+  }
+
+  .employee-card {
+    margin: 20px;
+    padding: 20px;
+    width: 400px;
+    font-size: 15px;
+  }
+
+  .employee-card {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: white;
+  }
+
+  .header-content input,
+  select,
+  .add-btn {
+    width: 100%;
+  }
+
+  .container {
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 0;
+    box-shadow: none;
+    flex: 1 0 auto;
+    background: transparent;
+  }
+  .app-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+}
+
+@media (max-width: 480px) {
+  .employee-grid {
+    grid-template-columns: 1fr; /* One card per row on small mobile */
+  }
+
+  .employee-card {
+    padding: 16px;
+    font-size: 14px;
+  }
+
+  .header-content input,
+  select,
+  .add-btn {
+    width: 100%;
+  }
+
+  html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container {
+    flex: 1 0 auto;
+  }
+
+  .app-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+}
+
